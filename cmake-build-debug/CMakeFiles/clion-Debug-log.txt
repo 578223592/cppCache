@@ -1,0 +1,4 @@
+Cannot generate into /home/swx/2023_project/cppCache/cmake-build-debug
+It was created with incompatible generator 'Unix Makefiles'
+
+Please either delete it manually or select another generation directory
