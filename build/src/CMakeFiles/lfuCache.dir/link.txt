@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/liblfuCache.a CMakeFiles/lfuCache.dir/LFUCache.cpp.o
+/usr/bin/ranlib ../../lib/liblfuCache.a

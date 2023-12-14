@@ -25,6 +25,7 @@ public:
         eraseByKey(key);
 
         insert(key,value);
+        return value;
     }
 
     /**

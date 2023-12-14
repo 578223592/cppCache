@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libarcCache.a CMakeFiles/arcCache.dir/ARCCache.cpp.o
+/usr/bin/ranlib ../../lib/libarcCache.a
