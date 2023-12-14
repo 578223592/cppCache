@@ -1,0 +1,10 @@
+/home/swx/2023_project/cppCache/build/CMakeFiles/edit_cache.dir
+/home/swx/2023_project/cppCache/build/CMakeFiles/rebuild_cache.dir
+/home/swx/2023_project/cppCache/build/src/CMakeFiles/lruCache.dir
+/home/swx/2023_project/cppCache/build/src/CMakeFiles/lfuCache.dir
+/home/swx/2023_project/cppCache/build/src/CMakeFiles/arcCache.dir
+/home/swx/2023_project/cppCache/build/src/CMakeFiles/edit_cache.dir
+/home/swx/2023_project/cppCache/build/src/CMakeFiles/rebuild_cache.dir
+/home/swx/2023_project/cppCache/build/example/CMakeFiles/run_test.dir
+/home/swx/2023_project/cppCache/build/example/CMakeFiles/edit_cache.dir
+/home/swx/2023_project/cppCache/build/example/CMakeFiles/rebuild_cache.dir

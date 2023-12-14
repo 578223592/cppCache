@@ -1,0 +1,7 @@
+# ninja log v5
+338	350	1702286013856742612	../lib/liblfuCache.a	9716ef0aba438f8f
+562	590	1701951480838293779	../lib/liblruCache.a	ae19c056212fbebd
+0	562	1701951480810292955	src/CMakeFiles/lruCache.dir/LRUCache.cpp.o	22208a24e8aabc2c
+711	785	1702286035409101476	../bin/run_test	1b9b0d1d64cf4a3e
+0	338	1702286013844742411	src/CMakeFiles/lfuCache.dir/LFUCache.cpp.o	d2698892ffff327e
+0	711	1702286035333100213	example/CMakeFiles/run_test.dir/run_test.cpp.o	5d39d55040f2e710
