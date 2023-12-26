@@ -168,6 +168,19 @@ run_test/fast:
 	$(MAKE) $(MAKESILENT) -f example/CMakeFiles/run_test.dir/build.make example/CMakeFiles/run_test.dir/build
 .PHONY : run_test/fast
 
+#=============================================================================
+# Target rules for targets named per_test
+
+# Build rule for target.
+per_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 per_test
+.PHONY : per_test
+
+# fast build rule for target.
+per_test/fast:
+	$(MAKE) $(MAKESILENT) -f example/CMakeFiles/per_test.dir/build.make example/CMakeFiles/per_test.dir/build
+.PHONY : per_test/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -179,6 +192,7 @@ help:
 	@echo "... arcCache"
 	@echo "... lfuCache"
 	@echo "... lruCache"
+	@echo "... per_test"
 	@echo "... run_test"
 .PHONY : help
 

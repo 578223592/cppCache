@@ -8,6 +8,7 @@
 #include <memory>
 #include <unordered_map>
 #include <iostream>
+#include "Cache.h"
 //
 enum LruType
 {
@@ -19,8 +20,10 @@ enum LruType
 };
 
 template <typename TK, typename TV>
-class ARCCache
+class ARCCache:public Cache<TK,TV>
 {
+private:
+    
 private:
     struct ArcEntry;
     using ArcEntryPtr = std::shared_ptr<ArcEntry>;
@@ -68,12 +71,16 @@ private:
     std::list<ArcEntryPtr> T2List_;
     std::list<ArcEntryPtr> B2List_;
     std::unordered_map<TK, ArcEntryPtr> arcEntryUMap;
-    std::unordered_map<int, std::list<ArcEntryPtr> *> listUMap_; // 保存不同list的地址，目的是方便不同节点之间的移动
+    std::unordered_map<LruType, std::list<ArcEntryPtr> *> listUMap_; // 保存不同list的地址，目的是方便不同节点之间的移动
 };
 
 template <typename TK, typename TV>
 void ARCCache<TK, TV>::hit(ARCCache::ArcEntryPtr arcEntry)
 {
+    if((int)B2List_.size()+(int)B1List_.size()+(int)T1List_.size()+(int)T2List_.size() - (int)arcEntryUMap.size()!=0){
+        std::cout<<(int)B2List_.size()+(int)B1List_.size()+(int)T1List_.size()+(int)T2List_.size() - (int)arcEntryUMap.size()<<std::endl;
+
+    }
     if (arcEntry->lruType_ != LruType::None)
     {
         //        case 1 2 3
@@ -139,14 +146,15 @@ void ARCCache<TK, TV>::hit(ARCCache::ArcEntryPtr arcEntry)
         arcEntryUMap[arcEntry->key_] = arcEntry;
     }
 
+
 }
 
 template <typename TK, typename TV>
 inline void ARCCache<TK, TV>::move_to_lru(ARCCache::ArcEntryPtr arcEntry, LruType toListType)
 {
-    std::list<ARCCache<TK, TV>::ArcEntryPtr> toList = *listUMap_[toListType];
-    toList.splice(toList.begin(), *listUMap_[arcEntry->lruType_], arcEntry->it_);
-    arcEntry->it_ = toList.begin();
+    std::list<ARCCache<TK, TV>::ArcEntryPtr> *toList = listUMap_[toListType];
+    toList->splice(toList->begin(), *listUMap_[arcEntry->lruType_], arcEntry->it_);
+    arcEntry->it_ = toList->begin();
     arcEntry->lruType_ = toListType;
 }
 
@@ -166,13 +174,17 @@ inline void ARCCache<TK, TV>::replace(bool xtInB2)
 template <typename TK, typename TV>
 void ARCCache<TK, TV>::set(TK key, TV val)
 {
+    this->totalCount_++;
+
     ArcEntryPtr arcEntryPtr = nullptr;
     if (arcEntryUMap.find(key) == arcEntryUMap.end())
     {
+
         arcEntryPtr = std::make_shared<ArcEntry>(key, val, LruType::None);
     }
     else
     {
+        this->hitCount_++;
         arcEntryPtr = arcEntryUMap[key];
         arcEntryPtr->val_ = val;
     }
@@ -180,7 +192,8 @@ void ARCCache<TK, TV>::set(TK key, TV val)
 }
 
 template <typename TK, typename TV>
-inline ARCCache<TK, TV>::ARCCache(int capacity): capacity_(capacity), p_(0)
+inline ARCCache<TK, TV>::ARCCache(const int capacity): capacity_(capacity), p_(0),
+T1List_(),T2List_(),B1List_(),B2List_(),arcEntryUMap(),listUMap_()
 {
     listUMap_[LruType::T1] = &T1List_;
     listUMap_[LruType::T2] = &T2List_;

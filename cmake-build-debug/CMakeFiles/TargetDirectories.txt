@@ -6,5 +6,6 @@
 /home/swx/2023_project/cppCache/cmake-build-debug/src/CMakeFiles/edit_cache.dir
 /home/swx/2023_project/cppCache/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
 /home/swx/2023_project/cppCache/cmake-build-debug/example/CMakeFiles/run_test.dir
+/home/swx/2023_project/cppCache/cmake-build-debug/example/CMakeFiles/per_test.dir
 /home/swx/2023_project/cppCache/cmake-build-debug/example/CMakeFiles/edit_cache.dir
 /home/swx/2023_project/cppCache/cmake-build-debug/example/CMakeFiles/rebuild_cache.dir

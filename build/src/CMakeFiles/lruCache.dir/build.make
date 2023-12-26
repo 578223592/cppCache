@@ -73,15 +73,15 @@ src/CMakeFiles/lruCache.dir/LRUCache.cpp.o: src/CMakeFiles/lruCache.dir/flags.ma
 src/CMakeFiles/lruCache.dir/LRUCache.cpp.o: ../src/LRUCache.cpp
 src/CMakeFiles/lruCache.dir/LRUCache.cpp.o: src/CMakeFiles/lruCache.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swx/2023_project/cppCache/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/lruCache.dir/LRUCache.cpp.o"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/lruCache.dir/LRUCache.cpp.o -MF CMakeFiles/lruCache.dir/LRUCache.cpp.o.d -o CMakeFiles/lruCache.dir/LRUCache.cpp.o -c /home/swx/2023_project/cppCache/src/LRUCache.cpp
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/lruCache.dir/LRUCache.cpp.o -MF CMakeFiles/lruCache.dir/LRUCache.cpp.o.d -o CMakeFiles/lruCache.dir/LRUCache.cpp.o -c /home/swx/2023_project/cppCache/src/LRUCache.cpp
 
 src/CMakeFiles/lruCache.dir/LRUCache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lruCache.dir/LRUCache.cpp.i"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/src/LRUCache.cpp > CMakeFiles/lruCache.dir/LRUCache.cpp.i
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/src/LRUCache.cpp > CMakeFiles/lruCache.dir/LRUCache.cpp.i
 
 src/CMakeFiles/lruCache.dir/LRUCache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lruCache.dir/LRUCache.cpp.s"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/src/LRUCache.cpp -o CMakeFiles/lruCache.dir/LRUCache.cpp.s
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/src/LRUCache.cpp -o CMakeFiles/lruCache.dir/LRUCache.cpp.s
 
 # Object files for target lruCache
 lruCache_OBJECTS = \

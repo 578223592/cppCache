@@ -73,15 +73,15 @@ example/CMakeFiles/run_test.dir/run_test.cpp.o: example/CMakeFiles/run_test.dir/
 example/CMakeFiles/run_test.dir/run_test.cpp.o: ../example/run_test.cpp
 example/CMakeFiles/run_test.dir/run_test.cpp.o: example/CMakeFiles/run_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swx/2023_project/cppCache/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object example/CMakeFiles/run_test.dir/run_test.cpp.o"
-	cd /home/swx/2023_project/cppCache/build/example && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/CMakeFiles/run_test.dir/run_test.cpp.o -MF CMakeFiles/run_test.dir/run_test.cpp.o.d -o CMakeFiles/run_test.dir/run_test.cpp.o -c /home/swx/2023_project/cppCache/example/run_test.cpp
+	cd /home/swx/2023_project/cppCache/build/example && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/CMakeFiles/run_test.dir/run_test.cpp.o -MF CMakeFiles/run_test.dir/run_test.cpp.o.d -o CMakeFiles/run_test.dir/run_test.cpp.o -c /home/swx/2023_project/cppCache/example/run_test.cpp
 
 example/CMakeFiles/run_test.dir/run_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run_test.dir/run_test.cpp.i"
-	cd /home/swx/2023_project/cppCache/build/example && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/example/run_test.cpp > CMakeFiles/run_test.dir/run_test.cpp.i
+	cd /home/swx/2023_project/cppCache/build/example && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/example/run_test.cpp > CMakeFiles/run_test.dir/run_test.cpp.i
 
 example/CMakeFiles/run_test.dir/run_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run_test.dir/run_test.cpp.s"
-	cd /home/swx/2023_project/cppCache/build/example && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/example/run_test.cpp -o CMakeFiles/run_test.dir/run_test.cpp.s
+	cd /home/swx/2023_project/cppCache/build/example && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/example/run_test.cpp -o CMakeFiles/run_test.dir/run_test.cpp.s
 
 # Object files for target run_test
 run_test_OBJECTS = \
@@ -94,6 +94,7 @@ run_test_EXTERNAL_OBJECTS =
 ../bin/run_test: example/CMakeFiles/run_test.dir/build.make
 ../bin/run_test: ../lib/liblruCache.a
 ../bin/run_test: ../lib/liblfuCache.a
+../bin/run_test: ../lib/libarcCache.a
 ../bin/run_test: example/CMakeFiles/run_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/swx/2023_project/cppCache/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/run_test"
 	cd /home/swx/2023_project/cppCache/build/example && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_test.dir/link.txt --verbose=$(VERBOSE)

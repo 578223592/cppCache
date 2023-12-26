@@ -73,15 +73,15 @@ src/CMakeFiles/lfuCache.dir/LFUCache.cpp.o: src/CMakeFiles/lfuCache.dir/flags.ma
 src/CMakeFiles/lfuCache.dir/LFUCache.cpp.o: ../src/LFUCache.cpp
 src/CMakeFiles/lfuCache.dir/LFUCache.cpp.o: src/CMakeFiles/lfuCache.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swx/2023_project/cppCache/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/lfuCache.dir/LFUCache.cpp.o"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/lfuCache.dir/LFUCache.cpp.o -MF CMakeFiles/lfuCache.dir/LFUCache.cpp.o.d -o CMakeFiles/lfuCache.dir/LFUCache.cpp.o -c /home/swx/2023_project/cppCache/src/LFUCache.cpp
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/lfuCache.dir/LFUCache.cpp.o -MF CMakeFiles/lfuCache.dir/LFUCache.cpp.o.d -o CMakeFiles/lfuCache.dir/LFUCache.cpp.o -c /home/swx/2023_project/cppCache/src/LFUCache.cpp
 
 src/CMakeFiles/lfuCache.dir/LFUCache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lfuCache.dir/LFUCache.cpp.i"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/src/LFUCache.cpp > CMakeFiles/lfuCache.dir/LFUCache.cpp.i
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/src/LFUCache.cpp > CMakeFiles/lfuCache.dir/LFUCache.cpp.i
 
 src/CMakeFiles/lfuCache.dir/LFUCache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lfuCache.dir/LFUCache.cpp.s"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/src/LFUCache.cpp -o CMakeFiles/lfuCache.dir/LFUCache.cpp.s
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/src/LFUCache.cpp -o CMakeFiles/lfuCache.dir/LFUCache.cpp.s
 
 # Object files for target lfuCache
 lfuCache_OBJECTS = \

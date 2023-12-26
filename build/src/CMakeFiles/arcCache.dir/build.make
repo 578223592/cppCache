@@ -73,15 +73,15 @@ src/CMakeFiles/arcCache.dir/ARCCache.cpp.o: src/CMakeFiles/arcCache.dir/flags.ma
 src/CMakeFiles/arcCache.dir/ARCCache.cpp.o: ../src/ARCCache.cpp
 src/CMakeFiles/arcCache.dir/ARCCache.cpp.o: src/CMakeFiles/arcCache.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swx/2023_project/cppCache/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/arcCache.dir/ARCCache.cpp.o"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/arcCache.dir/ARCCache.cpp.o -MF CMakeFiles/arcCache.dir/ARCCache.cpp.o.d -o CMakeFiles/arcCache.dir/ARCCache.cpp.o -c /home/swx/2023_project/cppCache/src/ARCCache.cpp
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/arcCache.dir/ARCCache.cpp.o -MF CMakeFiles/arcCache.dir/ARCCache.cpp.o.d -o CMakeFiles/arcCache.dir/ARCCache.cpp.o -c /home/swx/2023_project/cppCache/src/ARCCache.cpp
 
 src/CMakeFiles/arcCache.dir/ARCCache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arcCache.dir/ARCCache.cpp.i"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/src/ARCCache.cpp > CMakeFiles/arcCache.dir/ARCCache.cpp.i
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swx/2023_project/cppCache/src/ARCCache.cpp > CMakeFiles/arcCache.dir/ARCCache.cpp.i
 
 src/CMakeFiles/arcCache.dir/ARCCache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arcCache.dir/ARCCache.cpp.s"
-	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/src/ARCCache.cpp -o CMakeFiles/arcCache.dir/ARCCache.cpp.s
+	cd /home/swx/2023_project/cppCache/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swx/2023_project/cppCache/src/ARCCache.cpp -o CMakeFiles/arcCache.dir/ARCCache.cpp.s
 
 # Object files for target arcCache
 arcCache_OBJECTS = \

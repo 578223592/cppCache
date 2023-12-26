@@ -126,4 +126,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/lfuCache.dir/DependInfo.cmake"
   "src/CMakeFiles/arcCache.dir/DependInfo.cmake"
   "example/CMakeFiles/run_test.dir/DependInfo.cmake"
+  "example/CMakeFiles/per_test.dir/DependInfo.cmake"
   )

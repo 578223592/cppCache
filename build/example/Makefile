@@ -130,6 +130,44 @@ run_test/fast:
 	cd /home/swx/2023_project/cppCache/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/run_test.dir/build.make example/CMakeFiles/run_test.dir/build
 .PHONY : run_test/fast
 
+# Convenience name for target.
+example/CMakeFiles/per_test.dir/rule:
+	cd /home/swx/2023_project/cppCache/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/CMakeFiles/per_test.dir/rule
+.PHONY : example/CMakeFiles/per_test.dir/rule
+
+# Convenience name for target.
+per_test: example/CMakeFiles/per_test.dir/rule
+.PHONY : per_test
+
+# fast build rule for target.
+per_test/fast:
+	cd /home/swx/2023_project/cppCache/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/per_test.dir/build.make example/CMakeFiles/per_test.dir/build
+.PHONY : per_test/fast
+
+per_test.o: per_test.cpp.o
+.PHONY : per_test.o
+
+# target to build an object file
+per_test.cpp.o:
+	cd /home/swx/2023_project/cppCache/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/per_test.dir/build.make example/CMakeFiles/per_test.dir/per_test.cpp.o
+.PHONY : per_test.cpp.o
+
+per_test.i: per_test.cpp.i
+.PHONY : per_test.i
+
+# target to preprocess a source file
+per_test.cpp.i:
+	cd /home/swx/2023_project/cppCache/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/per_test.dir/build.make example/CMakeFiles/per_test.dir/per_test.cpp.i
+.PHONY : per_test.cpp.i
+
+per_test.s: per_test.cpp.s
+.PHONY : per_test.s
+
+# target to generate assembly for a file
+per_test.cpp.s:
+	cd /home/swx/2023_project/cppCache/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/per_test.dir/build.make example/CMakeFiles/per_test.dir/per_test.cpp.s
+.PHONY : per_test.cpp.s
+
 run_test.o: run_test.cpp.o
 .PHONY : run_test.o
 
@@ -162,7 +200,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... per_test"
 	@echo "... run_test"
+	@echo "... per_test.o"
+	@echo "... per_test.i"
+	@echo "... per_test.s"
 	@echo "... run_test.o"
 	@echo "... run_test.i"
 	@echo "... run_test.s"
