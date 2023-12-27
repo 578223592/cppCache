@@ -1,4 +1,0 @@
-无法生成至 /home/swx/2023_project/cppCache/cmake-build-debug
-它由不兼容的生成器 'Unix Makefiles' 创建
-
-请手动删除或选择其他生成目录
