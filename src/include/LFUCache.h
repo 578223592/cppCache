@@ -4,12 +4,12 @@
 
 #ifndef CPPCACHE_LFUCACHE_H
 #define CPPCACHE_LFUCACHE_H
+#include <cassert>
 #include <list>
 #include <unordered_map>
 #include <map>
 #include <unordered_map>
 #include <memory>
-
 #include "Cache.h"
 // https://leetcode.cn/problems/lfu-cache/solutions/2457716/tu-jie-yi-zhang-tu-miao-dong-lfupythonja-f56h/
 
@@ -32,9 +32,11 @@ private:
 private:
     int capacity_;
 
-    typedef std::list<std::shared_ptr<Node>> oneCacheList;
+    typedef std::list<std::shared_ptr<Node> > oneCacheList;
     std::map<int, std::shared_ptr<oneCacheList> > freqToListUMap; // 频率-频率对应的链表
-    std::unordered_map<TK,typename oneCacheList::iterator > keyToNodeUMap; // key-对应的Node在List中的iterator
+
+    std::unordered_map<TK, typename oneCacheList::iterator> keyToNodeUMap; // key-对应的Node在List中的iterator
+
 
 public:
     explicit LFUCache(int capacity) : capacity_(capacity) {
@@ -54,11 +56,11 @@ public:
             if (keyToNodeUMap.size() >= capacity_) {
                 eraseOneNode();
             }
-
             if (freqToListUMap.find(1) == freqToListUMap.end()) {
-                auto ptr = new oneCacheList();
-                freqToListUMap[1] = std::shared_ptr<oneCacheList>(ptr);  //what fuck？use make_shared will make error
-                // freqToListUMap[1] = std::make_shared<oneCacheList>();
+                // auto ptr = new oneCacheList();
+                // freqToListUMap[1] = std::shared_ptr<oneCacheList>(ptr); //what fuck？use make_shared will make error
+                // freqToListUMap[1] = std::make_shared<oneCacheList>(); //error
+                freqToListUMap.insert(std::make_pair(1, std::make_shared<oneCacheList>()));
             }
             auto node = std::make_shared<Node>(key, val, 1);
             freqToListUMap.at(1)->push_front(node);
@@ -71,7 +73,7 @@ public:
         if (keyToNodeUMap.find(key) == keyToNodeUMap.end()) {
             return TV();
         }
-        typename  std::list<std::shared_ptr<Node> >::iterator it = keyToNodeUMap[key];
+        typename std::list<std::shared_ptr<Node> >::iterator it = keyToNodeUMap[key];
         auto res = (*it)->val_;
         moveNodeToNextFreq(it);
         return res;
@@ -89,20 +91,21 @@ private:
             // 如果为空，就删除该列表
             freqToListUMap.erase(freq);
         }
-
     }
 
     void moveNodeToNextFreq(const typename oneCacheList::iterator &it) {
         auto nodeSPtr = (*it);
         eraseListIt(it);
-        ++nodeSPtr->freq_;
-        if(freqToListUMap.find(nodeSPtr->freq_) == freqToListUMap.end()){
-            auto ptr = new oneCacheList();
-            freqToListUMap[nodeSPtr->freq_] = std::shared_ptr<oneCacheList>(ptr);
-
-            // freqToListUMap[nodeSPtr->freq_] = std::make_shared<oneCacheList>();
+        ++(nodeSPtr->freq_);
+        if (freqToListUMap.find(nodeSPtr->freq_) == freqToListUMap.end()) {
+            // auto ptr = new oneCacheList();
+            // freqToListUMap[nodeSPtr->freq_] = std::shared_ptr<oneCacheList>(ptr);
+            freqToListUMap.insert(std::make_pair(nodeSPtr->freq_,
+                                                 std::make_shared<std::list<std::shared_ptr<Node> > >()));
+            // freqToListUMap[nodeSPtr->freq_] = std::make_shared<std::list<std::shared_ptr<Node>>>(); // error
         }
-        freqToListUMap[nodeSPtr->freq_]->emplace_front(nodeSPtr);
+        freqToListUMap.at(nodeSPtr->freq_)->emplace_front(nodeSPtr);
+        keyToNodeUMap[nodeSPtr->key_] = freqToListUMap.at(nodeSPtr->freq_)->begin();
     }
 
     /**
@@ -112,10 +115,9 @@ private:
     void eraseOneNode() {
         int minFreq = freqToListUMap.begin()->first;
         auto nodeSharedPtr = freqToListUMap.begin()->second->back(); // 最后一个元素是最老的，最新使用的插在对头
-
+        assert(nodeSharedPtr->freq_ == minFreq);
         eraseListIt(--(freqToListUMap.at(minFreq)->end()));
         keyToNodeUMap.erase(nodeSharedPtr->key_);
-
     }
 };
 
